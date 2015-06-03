@@ -1,0 +1,183 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "PageBase.cshtml";
+}
+
+
+    <div class="main-container">
+        <div class="row">
+            <div class="box">
+                <div class="text-center">
+					 <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Najlepsze darmowe gry</strong>
+                    </h2>
+                    <hr>
+                    @{
+						
+                                    if (Model.Content.HasValue("reflinksHeaderImage"))
+                                     {
+                                        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("reflinksHeaderImage"));
+                                        <img class="img-responsive img-border img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                              		 }
+                     			}
+
+						@Umbraco.Field("reflinksHeaderContent")
+							
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="box">
+                <div class="">
+                     <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Linki do darmowych gier</strong>
+                    </h2>
+                    <hr>
+							
+                  <div class="row">
+					  
+                      <div class="col-xs-4">  
+						  
+					    <a href="reflinkLink1" class="thumbnail">
+                           
+							  @{
+						
+                                    if (Model.Content.HasValue("reflinkImage1"))
+                                     {
+                                        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("reflinkImage1"));
+                                        <img class="img-responsive img-border img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                              		 }
+                     			}
+								</a>
+								
+					  	<p>@Umbraco.Field("reflinkDescribe1")<p />
+						<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+            			
+					  </div>
+								
+                         <div class="col-xs-4">  
+						  
+					    <a href="reflinkLink2" class="thumbnail">
+                           
+							  @{
+						
+                                    if (Model.Content.HasValue("reflinkImage2"))
+                                     {
+										 var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("reflinkImage2"));
+                                        <img class="img-responsive img-border img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                              		 }
+                     			}
+								</a>
+								
+					  	<p>@Umbraco.Field("reflinkDescribe2")<p />
+						<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+            			
+					  </div>
+								
+                        <div class="col-xs-4">  
+						  
+					    <a href="reflinkLink3" class="thumbnail">
+                           
+							  @{
+						
+                                    if (Model.Content.HasValue("reflinkImage3"))
+                                     {
+                                        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("reflinkImage3"));
+                                        <img class="img-responsive img-border img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                              		 }
+                     			}
+								</a>
+								
+					  	<p>@Umbraco.Field("reflinkDescribe3")<p />
+						<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+            			
+					  </div>
+								
+					</div>
+					<div class="row">
+
+                         <div class="col-xs-4">  
+						  
+					    <a href="reflinkLink4" class="thumbnail">
+                           
+							  @{
+						
+                                    if (Model.Content.HasValue("reflinkImage4"))
+                                     {
+                                        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("reflinkImage4"));
+                                        <img class="img-responsive img-border img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                              		 }
+                     			}
+								</a>
+								
+					  	<p>@Umbraco.Field("reflinkDescribe4")<p />
+						<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+            			
+					  </div>
+								
+                         <div class="col-xs-4">  
+						  
+					    <a href="reflinkLink5" class="thumbnail">
+                           
+							  @{
+						
+                                    if (Model.Content.HasValue("reflinkImage5"))
+                                     {
+                                        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("reflinkImage5"));
+                                        <img class="img-responsive img-border img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                              		 }
+                     			}
+								</a>
+								
+					  	<p>@Umbraco.Field("reflinkDescribe5")<p />
+						<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+            			
+					  </div>
+								
+                   
+					    <div class="col-xs-4">  
+						  
+					    <a href="reflinkLink6" class="thumbnail">
+                           
+							  @{
+						
+                                    if (Model.Content.HasValue("reflinkImage6"))
+                                     {
+                                        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("reflinkImage6"));
+                                        <img class="img-responsive img-border img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                              		 }
+                     			}
+								</a>
+								
+					  	<p>@Umbraco.Field("reflinkDescribe6")<p />
+						<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+            			
+					  </div>
+								
+					</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="box">
+                <div class="">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Opis gry</strong>
+                    </h2>
+                    <hr>
+                    
+                    
+                </div>
+            </div>
+        </div>
+						
+</div>
+        <!-- /.container -->

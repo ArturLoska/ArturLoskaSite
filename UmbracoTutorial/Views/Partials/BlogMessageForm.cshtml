@@ -1,0 +1,9 @@
+﻿@using UmbracoTutorial.SurfaceController
+@model UmbracoTutorial.ViewModel.ContactViewModel
+           
+@using (Html.BeginUmbracoForm<BlogPostSurfaceController>("CreateMessage"))
+{
+    @Html.EditorFor(x=> Model)
+    <imput type="submit">
+    
+}</imput>

@@ -1,0 +1,217 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "PageBase.cshtml";
+}
+
+
+    <div class="main-container">
+        <div class="row">
+            <div class="box">
+                <div class="text-center">
+                    <div id="carousel-example-generic" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators hidden-xs">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+
+                            <div class="item active">
+
+
+
+                                @{
+                                    if (Model.Content.HasValue("carouselImageLink1"))
+                                    {
+                                        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("carouselImageLink1"));
+                                        <img class="img-responsive img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                                    }
+                                }
+
+                            </div>
+                            <div class="item">
+                                @{
+                                    if (Model.Content.HasValue("carouselImageLink2"))
+                                    {
+                                        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("carouselImageLink2"));
+                                        <img class="img-responsive img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                                    }
+                                }
+                            </div>
+                            <div class="item">
+                                @{
+                                    if (Model.Content.HasValue("carouselImageLink3"))
+                                    {
+                                        var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("carouselImageLink3"));
+                                        <img class="img-responsive img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+                                    }
+                                }
+                            </div>
+                        </div>
+
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    </div>
+                    <h2 class="brand-before">
+                        <small>@Umbraco.Field("welcomeMessageSmallAbove")</small>
+                    </h2>
+                    <h1 class="brand-name">@Umbraco.Field("welcomeMessageBig")</h1>
+                    <hr class="tagline-divider">
+                    <h2>
+                        <small>
+                            <strong>@Umbraco.Field("welcomeMessageSmallUnder")</strong>
+                        </small>
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="box">
+                <div class="">
+                    <hr>
+                    <h2 class="intro-text text-center">
+						
+						<div class="row text-center hidden-xs">
+                            <strong>
+                                <div class="col-sm-4 new" align="center" id="new">Najnowsze</div><div class="col-sm-4 pop" align="center" id="pop"> Najpopularniejsze </div><div class="col-sm-4" align="center" id="rec"> Polecane</div>
+                            </strong>
+</div>
+							<div class="col-xs-12 visible-xs new" id="new">Najnowsze</div><div class="col-xs-12 pop visible-xs pop" id="pop"> Najpopularniejsze </div><div class="col-xs-12 visible-xs rec" id="rec"> Polecane</div>
+							
+                  
+								
+ 					</h2>
+                    <hr>		 
+			
+                 <div id="youtubecontent">  
+								
+				@Html.Partial("YoutubeNew", @Model.Content)
+				</div>
+					 
+					 
+                </div>
+            </div>
+        </div>
+
+								<br>
+
+
+        <div class="row">
+            <div class="box">
+                <div class="">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Social Media</strong>
+                    </h2>
+                    <hr>
+                    
+                    <div class="fb-page visible-lg visible-md  col-lg-5 col-md-6" data-href="https://www.facebook.com/laskagaming" data-height="580" data-width="430" data-hide-cover="false" data-show-facepile="false" data-show-posts="true">
+                        <div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/laskagaming"><a href="https://www.facebook.com/laskagaming">Laska Gaming</a></blockquote></div>
+                    </div>
+                        
+                    
+                    <div class="visible-lg col-lg-2 col-md-2 " style="margin-top: 100px ">
+                        <a href="https://gamedot.pl/p/artur-loska" class="thumbnail">
+                            <img src="media/1015/logo_gamedot_200x100_color.png" alt="..." class="img-rounded" width="280" height="30">
+                        </a>
+                        <a href="#" class="thumbnail">
+                            <img src="media/1016/origin-logo.png" alt="..." class="img-rounded" width="280" height="40">
+                        </a>
+                        <a href="http://steamcommunity.com/id/laskagaming" class="thumbnail">
+                            <img src="media/smm/steam3.png" alt="..." class="img-rounded" width="280" height="30">
+                        </a>
+                        <a href="https://uplay.ubi.com/#!/pl-PL/profile/Artur_Loska" class="thumbnail">
+                            <img src="media/1022/uplay.png" alt="..." class="img-rounded" width="280" height="20">
+                        </a>
+                        <div style="clear: both; float: none; height: 0"></div>
+                    </div>
+
+                    <div class="visible-lg col-lg-5 col-md-6">
+                        <a class="twitter-timeline" href="https://twitter.com/LaskaGaming" data-widget-id="602757655237623808">Tweety użytkownika LaskaGaming </a>
+                        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                    </div>
+
+
+
+
+					<div class="fb-page visible-sm visible-xs col-xs-12 col-ms-6 text-center" data-href="https://www.facebook.com/laskagaming" data-height="580" data-hide-cover="false" data-show-facepile="false" data-show-posts="true">
+                        <div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/laskagaming"><a href="https://www.facebook.com/laskagaming">Laska Gaming</a></blockquote></div>
+                    </div>		
+
+                    <div class="hidden-lg col-xs-12 col-ms-6 col-md-6 text-center">
+                        <a class="twitter-timeline" href="https://twitter.com/LaskaGaming" data-widget-id="602757655237623808">Tweety użytkownika LaskaGaming </a>
+                        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+                    </div>
+                 
+
+                   
+                      <div class="row hidden-lg">
+						
+						   <div class="col-xs-2">  </div>
+                          <div class="col-xs-4">
+                              <a href="https://gamedot.pl/p/artur-loska" class="thumbnail">
+                                  <img src="media/smm/logo_gamedot_200x100_color.png" alt="..." width="200" height="100" class="img-responsive">
+                              </a>
+                          </div>
+                          <div class="col-xs-4">
+                              <a href="#" class="thumbnail">
+                                  <img src="media/smm/origin-logo.png" alt="..." width="200" height="100" class="img-responsive">
+                              </a>
+                          </div>
+									  
+							   <div class="col-xs-2">  </div>
+					</div>
+								
+					    <div class="row hidden-lg">
+						   <div class="col-xs-2">  </div>
+                            <div class="col-xs-4">
+                                <a href="https://gamedot.pl/p/artur-loska" class="thumbnail">
+                                    <img src="media/smm/steam3.png" alt="..." width="200" height="100" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="https://uplay.ubi.com/#!/pl-PL/profile/Artur_Loska" class="thumbnail">
+                                    <img src="media/smm/uplay.png" alt="..." width="200" height="100" class="img-responsive">
+                                </a>
+                            </div>	
+					 <div class="col-xs-2">  </div>
+					</div>
+
+                </div>
+            </div>
+        </div>
+						 </div>
+</div>
+        <!-- /.container -->
+
+
+@section Scripts{
+        <script>
+            $("#new").click(function () {
+                $.get("HomeController/NewPartPopActionResult", function (data) {
+                    $("#youtubecontent").html(data);
+                });
+                                
+                            });
+
+                            $("#pop").click(function () {
+                                $("#youtubecontent").html('pop');
+                            });
+
+                            $("#rec").click(function () {
+                                $("#youtubecontent").html('rec');
+                            });
+
+						</script>
+						
+        }

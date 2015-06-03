@@ -1,0 +1,51 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+	<div class="row text-center">
+
+                        <div class="visible-lg col-lg-4">
+                            @Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "290", VideoId = "null", VideoUrl = "[#youtubeUrl1pop]", VideoWidth = "370" })
+                            <p>@Umbraco.Field("youtubeUrl1namepop")<p />
+                        </div>
+                        <div class="visible-lg col-lg-4">
+                            @Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "290", VideoId = "null", VideoUrl = "[#youtubeUrl2pop]", VideoWidth = "370" })
+                            <p>@Umbraco.Field("youtubeUrl2namepop")<p />
+                        </div>
+                        <div class="visible-lg col-lg-4">
+                            @Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "290", VideoId = "null", VideoUrl = "[#youtubeUrl3pop]", VideoWidth = "370" })
+                            <p>@Umbraco.Field("youtubeUrl3namepop")<p />
+                        </div>
+
+
+
+
+                        <div class="visible-md visible-xs col-md-4 col-xs-12">
+                            @Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "190", VideoId = "null", VideoUrl = "[#youtubeUrl1pop]", VideoWidth = "270" })
+                            <p>@Umbraco.Field("youtubeUrl1namepop")<p />
+                        </div>
+                        <div class="visible-md visible-xs col-md-4 col-xs-12">
+                            @Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "190", VideoId = "null", VideoUrl = "[#youtubeUrl2pop]", VideoWidth = "270" })
+                            <p>@Umbraco.Field("youtubeUrl2namepop")<p />
+                        </div>
+                        <div class="visible-md visible-xs col-md-4 col-xs-12">
+                            @Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "190", VideoId = "null", VideoUrl = "[#youtubeUrl3pop]", VideoWidth = "270" })
+                            <p>@Umbraco.Field("youtubeUrl3namepop")<p />
+                        </div>
+
+
+
+
+
+                        <div class="visible-sm col-sm-12 ">
+                            @Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "340", VideoId = "null", VideoUrl = "[#youtubeUrl1pop]", VideoWidth = "420" })
+                            <p>@Umbraco.Field("youtubeUrl1namepop")<p />
+                        </div>
+                        <div class="visible-sm col-sm-12">
+                            @Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "340", VideoId = "null", VideoUrl = "[#youtubeUrl2pop]", VideoWidth = "420" })
+                            <p>@Umbraco.Field("youtubeUrl2namepop")<p />
+                        </div>
+                        <div class="visible-sm col-sm-12">
+                            @Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "340", VideoId = "null", VideoUrl = "[#youtubeUrl3pop]", VideoWidth = "420" })
+                            <p>@Umbraco.Field("youtubeUrl3namepop")<p />
+                        </div>
+
+                    </div>
