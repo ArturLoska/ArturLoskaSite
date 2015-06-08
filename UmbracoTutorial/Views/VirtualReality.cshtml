@@ -25,9 +25,21 @@
                                 }
                 </div>
                 <div class="col-xs-12 text-center">
-                    <p>@Umbraco.Field("virtualRealityContent")</p> 
+                    <p>@Umbraco.Field("virtualRealityContent")</p>   
+					 <hr>
 						</div>
-			
+					 <div class="row">
+					<div class="col-xs-4 text-center">
+					@Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "290", VideoId = "null", VideoUrl = "https://www.youtube.com/watch?v=SfEvs3bGuK4", VideoWidth = "370" })
+                     </div>
+						<div class="col-xs-4 text-center">
+					@Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "290", VideoId = "null", VideoUrl = "https://www.youtube.com/watch?v=-AePjA93NaA", VideoWidth = "370" })
+                     </div>
+							<div class="col-xs-4 text-center">
+					@Umbraco.RenderMacro("uTubeClassicPlayer", new { AllowFullScreen = "1", AspectRatio = "null", VideoHeight = "290", VideoId = "null", VideoUrl = "https://www.youtube.com/watch?v=BOrCTvg0TVs", VideoWidth = "370" })
+                     </div>
+					</div>
+								 <hr>
                 <a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span>   Cofnij  </a>
             </div>
 					</div>

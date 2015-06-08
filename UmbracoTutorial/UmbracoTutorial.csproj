@@ -267,6 +267,7 @@
     <Content Include="App_Plugins\YouTube\views\propertyEditors\YouTube.channel.html" />
     <Content Include="App_Readme\Spring.Rest.txt" />
     <Content Include="App_Readme\Spring.Social.Core.txt" />
+    <Content Include="bin\imagegen.dll" />
     <Content Include="Config\grid.editors.config.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -284,6 +285,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="App_Plugins\YouTube\package.manifest" />
+    <Content Include="ImageGen.ashx" />
+    <Content Include="bin\ImageGen.config" />
+    <Content Include="ImageGen.config" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Icon.png" />
     <Content Include="media\smm\logo_gamedot_200x100_color.png" />

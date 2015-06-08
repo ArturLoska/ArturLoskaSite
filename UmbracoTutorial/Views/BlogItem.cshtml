@@ -19,6 +19,7 @@
                                     {
                                         var mediaItem = Umbraco.TypedMedia(Model.Content.GetPropertyValue("articleimage"));
                                         <img class="img-responsive img-border img-full" src="@mediaItem.GetPropertyValue("umbracoFile")" alt="@mediaItem.GetPropertyValue("Name")" />
+										
                                     }
                                 }
                 </div>
@@ -27,9 +28,8 @@
 						</div>
 				<div class="verticalLine col-xs-3" style="border-left: black"> 
 					<h2 class="intro-text text-center">Polecane wpisy</h2>
-					<div class="row"> Polecany wpis 1</div>
-						<div class="row"> Polecany wpis 2</div>
-							<div class="row"> Polecany wpis 3</div>
+						@Html.Partial("RecommendedArticles", @Model.Content)
+						
 					 </div>
                 <div class="clearfix"></div>
             </div>
