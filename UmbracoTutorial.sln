@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoTutorial", "UmbracoTutorial\UmbracoTutorial.csproj", "{76FC1F83-961B-48E1-90DA-645675BD755A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArturLoskaSite", "ArturLoskaSite\ArturLoskaSite.csproj", "{C0739246-EC20-4E8F-ACE9-992C27540A52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{76FC1F83-961B-48E1-90DA-645675BD755A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76FC1F83-961B-48E1-90DA-645675BD755A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76FC1F83-961B-48E1-90DA-645675BD755A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0739246-EC20-4E8F-ACE9-992C27540A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0739246-EC20-4E8F-ACE9-992C27540A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0739246-EC20-4E8F-ACE9-992C27540A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0739246-EC20-4E8F-ACE9-992C27540A52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

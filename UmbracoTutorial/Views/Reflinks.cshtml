@@ -29,7 +29,7 @@
         </div>
 
 
-        <div class="row">
+        <div class="row" id="reflinkbase">
             <div class="box">
                 <div class="">
                      <hr>
@@ -38,7 +38,7 @@
                     </h2>
                     <hr>
 							
-                  <div class="row">
+                  <div class="row" >
 					  
                       <div class="col-xs-4">  
 					
@@ -87,13 +87,13 @@
 					 </div>
 						<div class="row">
 							 <div class="col-xs-4"> 
-						<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+						<div class="btn btn-default btn-lg" id="hots" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </div>
             			 </div>
 							<div class="col-xs-4"> 
-							<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+							<div class="btn btn-default btn-lg" id="smite" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry   </div>
             			 </div>
 								<div class="col-xs-4"> 
-								<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+								<div class="btn btn-default btn-lg" id="wot" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry   </div>
             		</div></div>
 							
 						<br>
@@ -153,14 +153,14 @@
 							
 							<div class="row">
 							 <div class="col-xs-4"> 
-						<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+						<div class="btn btn-default btn-lg" id="wartunder" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </div>
             			
 							</div>
 							<div class="col-xs-4"> 
-							<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+							<div class="btn btn-default btn-lg" id="drakensang" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </div>
             			 </div>
 								<div class="col-xs-4"> 
-								<a href="/otherprojects" class="btn btn-default btn-lg" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </a>
+								<div class="btn btn-default btn-lg" id="shakefidget" ><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>   Zobacz opis gry  </div>
             		</div></div>
 							
 					
@@ -179,11 +179,118 @@
                         <strong>Opis gry</strong>
                     </h2>
                     <hr>
-                    @Html.Partial("HeroesOfTheStorm", @Model.Content)
-					
+						<div id="gamedescritions">
+                   Wybierz opis gry z menu poniżej by zobaczyć więcej szczegółów
+						</div>
+						
+						<div class="row text-right"> 
+						<div class="btn btn-default btn-sm" id="goback"><span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span>   Powrót</div>
+						</div>
+						
                 </div>
             </div>
         </div>
 						
 </div>
         <!-- /.container -->
+@section ScriptsRefilnks{						
+<script>
+            $("#hots").click(function () {
+                $.get("umbraco/surface/partialsurface/index", function (data) {
+                    $("#gamedescritions").html(data);
+                });
+				
+				$(function() { //When the document loads
+  $("#hots").bind("click", function() {
+    $(window).scrollTop($("#gamedescritions").offset().top); //scroll to div with container as ID.
+    return false; //Prevent Default and event bubbling.
+  });
+});
+	
+				
+				
+$("#smite").click(function () {
+                $.get("umbraco/surface/partialsurface/smite", function (data) {
+                    $("#gamedescritions").html(data);
+                });
+				
+				$(function() { //When the document loads
+  $("#smite").bind("click", function() {
+    $(window).scrollTop($("#gamedescritions").offset().top); //scroll to div with container as ID.
+    return false; //Prevent Default and event bubbling.
+  });
+});
+				
+  });
+		
+
+$("#wot").click(function () {
+                $.get("umbraco/surface/partialsurface/wot", function (data) {
+                    $("#gamedescritions").html(data);
+                });
+				
+				$(function() { //When the document loads
+  $("#wot").bind("click", function() {
+    $(window).scrollTop($("#gamedescritions").offset().top); //scroll to div with container as ID.
+    return false; //Prevent Default and event bubbling.
+  });
+});
+	 
+	});		 
+	 
+	  $("#wartunder").click(function () {
+                $.get("umbraco/surface/partialsurface/warTunder", function (data) {
+                    $("#gamedescritions").html(data);
+                });
+				
+				$(function() { //When the document loads
+  $("#wartunder").bind("click", function() {
+    $(window).scrollTop($("#gamedescritions").offset().top); //scroll to div with container as ID.
+    return false; //Prevent Default and event bubbling.
+  });
+});
+				
+	});					
+	
+		   $("#drakensang").click(function () {
+                $.get("umbraco/surface/partialsurface/drakensangOnline", function (data) {
+                    $("#gamedescritions").html(data);
+                });
+				
+				$(function() { //When the document loads
+  $("#drakensang").bind("click", function() {
+    $(window).scrollTop($("#gamedescritions").offset().top); //scroll to div with container as ID.
+    return false; //Prevent Default and event bubbling.
+  });
+});
+				
+});						
+		
+			    $("#shakefidget").click(function () {
+                $.get("umbraco/surface/partialsurface/shakeFidget", function (data) {
+                    $("#gamedescritions").html(data);
+                });
+				
+				$(function() { //When the document loads
+  $("#shakefidget").bind("click", function() {
+    $(window).scrollTop($("#gamedescritions").offset().top); //scroll to div with container as ID.
+    return false; //Prevent Default and event bubbling.
+  });
+});				
+				
+});		
+				$(function() { //When the document loads
+  $("#goback").bind("click", function() {
+    $(window).scrollTop($("#reflinkbase").offset().top); //scroll to div with container as ID.
+    return false; //Prevent Default and event bubbling.
+  });
+});
+				
+                                
+                            });
+
+                          
+
+</script>
+	
+}

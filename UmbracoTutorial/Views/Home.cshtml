@@ -193,25 +193,3 @@
 						 </div>
 </div>
         <!-- /.container -->
-
-
-@section Scripts{
-        <script>
-            $("#new").click(function () {
-                $.get("HomeController/NewPartPopActionResult", function (data) {
-                    $("#youtubecontent").html(data);
-                });
-                                
-                            });
-
-                            $("#pop").click(function () {
-                                $("#youtubecontent").html('pop');
-                            });
-
-                            $("#rec").click(function () {
-                                $("#youtubecontent").html('rec');
-                            });
-
-						</script>
-						
-        }

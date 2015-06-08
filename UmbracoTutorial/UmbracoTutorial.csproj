@@ -304,9 +304,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SurfaceControllers\PartialSurfaceController.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="SurfaceController\BlogPostSurfaceController.cs" />
     <Compile Include="ViewModel\ContactViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -342,6 +341,27 @@
     <Content Include="Views\PartialView\YoutubeNew.cshtml" />
     <Content Include="Views\PartialView\YoutubePop.cshtml" />
     <Content Include="Views\PartialView\YoutubeRec.cshtml" />
+    <Content Include="Views\Partials\DrakensangOnline.cshtml" />
+    <Content Include="Views\Partials\Footer.cshtml" />
+    <Content Include="Views\Partials\GenerateArticlesList.cshtml" />
+    <Content Include="Views\Partials\HeroesOfTheStorm.cshtml" />
+    <Content Include="Views\Partials\Navigation.cshtml" />
+    <Content Include="Views\Partials\PageSiteContent.cshtml" />
+    <Content Include="Views\Partials\RecommendedArticles.cshtml" />
+    <Content Include="Views\Partials\Smite.cshtml" />
+    <Content Include="Views\Partials\SnakesFidget.cshtml" />
+    <Content Include="Views\Partials\WarTunder.cshtml" />
+    <Content Include="Views\Partials\WordOfTanks.cshtml" />
+    <Content Include="Views\Partials\YoutubeNew.cshtml" />
+    <Content Include="Views\Partials\YoutubePop.cshtml" />
+    <Content Include="Views\Partials\YoutubeRec.cshtml" />
+    <Content Include="Views\PartialSurface\NewPartActionResult.cshtml" />
+    <Content Include="Views\PartialSurface\Index.cshtml" />
+    <Content Include="Views\PartialSurface\smite.cshtml" />
+    <Content Include="Views\PartialSurface\wot.cshtml" />
+    <Content Include="Views\PartialSurface\warTunder.cshtml" />
+    <Content Include="Views\PartialSurface\drakensangOnline.cshtml" />
+    <Content Include="Views\PartialSurface\shakeFidget.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
